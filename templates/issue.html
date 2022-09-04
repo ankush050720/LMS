@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment_3</title>
+	<script src="static/utility.js"></script>
+  </head>
+  <body>
+	<p>1. You can't take more than three books at a time.</p>
+    <p>2. You take take only a single piece of a book.</p> 
+    <p>3. Return the book in 2 weeks or Rs. 10/- fine per day shall be charged.</p>
+
+    <table border = 1>
+        <tr>
+            <th> book </th>
+            <th> count </th>
+        </tr>
+            {% for j, k in issue.items() %}
+                <tr>
+                    <td> {{ j }} </td>
+                    <td> {{ k[0] }} </td>
+                </tr>
+            {% endfor %}
+            
+     </table>
+    <form name="my_form3" >
+        Enter the name of book_1 &nbsp; <input type="text" name = "A"><br>
+        Enter the name of book_2 &nbsp; <input type="text" name = "B"><br>
+        Enter the name of book_3 &nbsp; <input type="text" name = "C"><br>
+        <input type="button" class="btn btn-sm" onclick="submitData('submitJSON3')" value="Submit">
+        <button type="reset" class="btn btn-sm">Reset</button><br>
+    </form>
+	<div class="row">
+    			<div class="col-md-8" align="left" style="float:left; margin-top: 0.45cm;" id="output_div">
+    			</div>
+    	</div> 
+</body>
+</html>

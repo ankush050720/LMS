@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment_3</title>
+	<script src="static/utility.js"></script>
+  </head>
+  <body>
+	<div align = 'center' style = "margin-top:25px">
+        <h3>Hello User!!!</h3><br>
+        </div>
+        <form name="my_form2" >
+            Enter your name &nbsp; <input type="text" name = "A"><br>
+            Enter your email &nbsp; <input type="email" name = "B"><br>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div><br>
+            <input type="button" class="btn btn-sm" onclick="submitData('submitJSON2')" value="Submit">
+            <button type="reset" class="btn btn-sm">Reset</button><br>
+            <p>What would you like to do</b>
+              <a href = {{url_for('issue')}} type="button" class="btn btn-primary">Issue</a>
+              <a href = {{url_for('reissue')}} type="button" class="btn btn-primary">Reissue</a>
+              <a href = {{url_for('ret')}} type="button" class="btn btn-primary">Return</a>
+        </form>
+	<div class="row">
+    			<div class="col-md-8" align="left" style="float:left; margin-top: 0.45cm;" id="output_div">
+    			</div>
+    	</div>
+</body>
+</html>
