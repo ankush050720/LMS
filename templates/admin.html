@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>LMS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h2 , h3 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    form input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+    
+    .btn-container {
+      text-align: center;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+    
+    #output_div {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+  <script src="static/utility.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Hello Admin!!!</h2>
+    <h3>Add books or directly click on submit to track the books</h3>
+    <form name="my_form1">
+      <label for="bookName">Enter the name of the book to be added:</label>
+      <input type="text" id="bookName" name="A">
+      <label for="bookCount">Enter the count of the book to be added:</label>
+      <input type="text" id="bookCount" name="B">
+      <div class="btn-container">
+        <input type="button" class="btn" onclick="submitData('submitJSON1')" value="Submit">
+        <button type="reset" class="btn">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
