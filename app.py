@@ -35,7 +35,7 @@ def processJSON1():
     jsonStr = request.get_json()
     jsonObj = json.loads(jsonStr)
     
-    book = (jsonObj['A']).strip()
+    book = (jsonObj['A']).strip().lower()
     b = jsonObj['B']
 
     if len(book) != 0:
@@ -78,8 +78,8 @@ def processJSON2():
     global sum
     jsonStr = request.get_json()
     jsonObj = json.loads(jsonStr)
-    name = (jsonObj['A']).strip()
-    email = jsonObj['B']
+    email = (jsonObj['A']).strip().lower()
+    name = jsonObj['B'].strip().lower()
     response = ''
     sum = 0
     
@@ -120,9 +120,9 @@ def processJSON3():
     jsonStr = request.get_json()
     jsonObj = json.loads(jsonStr)
     
-    a = (jsonObj['A']).strip()
-    b = (jsonObj['B']).strip()
-    c = (jsonObj['C']).strip()
+    a = (jsonObj['A']).strip().lower()
+    b = (jsonObj['B']).strip().lower()
+    c = (jsonObj['C']).strip().lower()
 
     response = ''
     x = datetime.datetime.now()
@@ -201,9 +201,9 @@ def processJSON4():
     jsonStr = request.get_json()
     jsonObj = json.loads(jsonStr)
 
-    a = (jsonObj['A']).strip()
-    b = (jsonObj['B']).strip()
-    c = (jsonObj['C']).strip()
+    a = (jsonObj['A']).strip().lower()
+    b = (jsonObj['B']).strip().lower()
+    c = (jsonObj['C']).strip().lower()
     datetime_now = datetime.datetime.now()
     
     response = ''
@@ -278,9 +278,9 @@ def processJSON5():
     jsonStr = request.get_json()
     jsonObj = json.loads(jsonStr)
 
-    a = (jsonObj['A']).strip()
-    b = (jsonObj['B']).strip()
-    c = (jsonObj['C']).strip()
+    a = (jsonObj['A']).strip().lower()
+    b = (jsonObj['B']).strip().lower()
+    c = (jsonObj['C']).strip().lower()
     datetime_now = datetime.datetime.now() 
     
     response = ''
